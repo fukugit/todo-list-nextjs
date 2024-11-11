@@ -9,18 +9,13 @@ export default function MainLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {pathname !== '/top' &&
-         <SidebarProvider>
+        <SidebarProvider>
           <AppSidebar />
           <main>
             <SidebarTrigger />
             {children}
           </main>
-        </SidebarProvider>}
-        {pathname == '/top' &&
-          <main>
-            {children}
-          </main>}
+        </SidebarProvider>
       </body>
     </html>
   );
